@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 from .views import TodoViewSet, UserRegistrationView
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-# Set up router for the todo viewset
+# Set up router for the Todo viewset
 router = DefaultRouter()
 router.register(r'todos', TodoViewSet, basename='todo')
 
