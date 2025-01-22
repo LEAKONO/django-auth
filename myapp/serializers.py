@@ -2,13 +2,13 @@ from rest_framework import serializers
 from .models import Todo
 from django.contrib.auth.models import User
 
-# User serializer
+# User serializer (already present)
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'email']
 
-# Todo serializer
+# Todo serializer (already present)
 class TodoSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)  # Nested user serializer
 
